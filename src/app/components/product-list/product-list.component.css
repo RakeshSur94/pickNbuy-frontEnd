@@ -1,0 +1,33 @@
+.product-card {
+    display: flex; /* Use Flexbox for layout */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    align-items: center; /* Center align items vertically */
+}
+
+.product-image {
+    flex: 1; /* Allow image section to grow */
+    max-width: 150px; /* Set a max width for the image */
+    margin-right: 16px; /* Add some space between image and details */
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product-details {
+    flex: 2; /* Allow details section to take more space */
+}
+
+.product-details h3 {
+    margin: 0 0 8px; /* Adjust margin for heading */
+}
+
+.product-details p {
+    margin: 4px 0; /* Adjust margin for paragraphs */
+}

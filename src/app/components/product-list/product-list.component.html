@@ -1,0 +1,13 @@
+<div *ngFor="let product of products" class="product-card">
+    <div class="product-image">
+        <img [src]="product.imageUrl" alt="{{ product.title }}" />
+    </div>
+    <div class="product-details">
+        <h3>{{ product.title }}</h3>
+        <p>{{ product.description }}</p>
+        <p><strong>Price:</strong> ${{ product.unitPrice }}</p>
+        <p><strong>In Stock:</strong> {{ product.unitsInStock }}</p>
+        <p><strong>Date Created:</strong> {{ product.dateCreated | date:'shortDate' }}</p>
+        <p><strong>Last Updated:</strong> {{ product.lastUpdated | date:'shortDate' }}</p>
+    </div>
+</div>
