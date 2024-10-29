@@ -1,0 +1,28 @@
+<header class="header-desktop">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+            <div class="header-wrap">
+               
+                    <input #myInput (keyup)="doSearch(myInput.value)" class="au-input au-input-xl" type="text" 
+                        placeholder="Search for data ..." />
+                    <button (click)="doSearch(myInput.value)" class="au-btn-submit" type="submit">
+                        Search
+                    </button>
+                    
+                    <a class="btn btn-primary" routerLink="/login" routerLinkActive="router-link-active">Login</a>
+
+                    
+               
+                <div class="cart-area d-n">
+                    <a routerLink="/cart">
+                        <div class="total">{{total | currency:'INR'}} <span> {{count}}</span> </div> <i class="fa fa-shopping-cart"
+                            aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="account-wrap"></div>
+        </div>
+    </div>
+  </header>
+  
+  

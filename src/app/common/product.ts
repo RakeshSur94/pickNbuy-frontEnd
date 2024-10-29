@@ -9,13 +9,11 @@ export class Product {
     public unitPrice: number,
     public imageUrl: string,
     public active: boolean,
-    public unitsInStock: number,
-    public dateCreated: Date ,
-    public lastUpdated: Date
+    public units_stock: number,
+    public date_created: Date ,
+    public last_updated: Date
     ){
-        // Convert date strings to Date objects
-        this.dateCreated = new Date(dateCreated);
-        this.lastUpdated = new Date(lastUpdated);
+       
     }
 
     

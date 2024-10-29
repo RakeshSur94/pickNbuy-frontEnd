@@ -1,1 +1,38 @@
-<app-product-list></app-product-list>
+
+
+<div class="page-wrapper">
+  <!-- MENU SIDEBAR-->
+  <aside class="menu-sidebar d-none d-lg-block">
+      <div class="logo">
+          <a href="#">
+              <img src="assets/image/product/logo.png" alt="ashokit" class="img-responsive">
+          </a>
+      </div>
+
+      <app-product-category></app-product-category>
+  </aside>
+  <!-- END MENU SIDEBAR-->
+  <div class="page-container">
+     <app-search></app-search>
+    
+                   
+  
+                    
+               
+       
+      
+      
+    
+     
+      <!-- END HEADER DESKTOP-->
+      <!-- MAIN CONTENT-->
+     <router-outlet></router-outlet>
+  </div>
+
+  <footer>
+      <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Help</a></li>
+      </ul>
+  </footer>

@@ -1,0 +1,44 @@
+<h1 class="cart-title">Cart Items</h1>
+<div class="cart-container">
+    <table class="cart-table" *ngIf="cart.length > 0; else emptyCart">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of cart; let ind = index">
+                <td><img [src]="item.imageUrl" alt="{{ item.name }}"></td>
+                <td>{{ item.name }}</td>
+                <td>{{ item.unitPrice * item.quantity | currency: 'INR' }}</td>
+                <td>
+                    <button (click)="decreaseQuantity(item)">−</button>
+                    {{ item.quantity }}
+                    <button (click)="addItem(item)">+</button>
+                </td>
+                <td>
+                    <button (click)="deleteItem(ind)">❎</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p *ngIf="cart.length > 0">Total: {{ total | currency: 'INR' }}</p>
+
+    <!-- Checkout button, disabled if cart is empty -->
+    <div class="action-buttons" *ngIf="cart.length > 0">
+        <button class="btn btn-primary" (click)="checkout()">
+            Checkout
+        </button>
+    </div>
+
+    <!-- Template for empty cart -->
+    <ng-template #emptyCart>
+        <p>Your cart is empty.</p>
+        <a class="btn btn-secondary" routerLink="/product">Back to Shopping</a>
+    </ng-template>
+</div>

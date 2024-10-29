@@ -1,0 +1,109 @@
+/* General Cart Styles */
+.cart-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  margin-top: 100px;
+  color: #FC8019; /* Primary color */
+}
+
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+/* Table Styling */
+.cart-table {
+  width: 80%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-table th, .cart-table td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+.cart-table th {
+  background-color: #FC8019; /* Primary color */
+  color: white;
+}
+
+.cart-table td img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Quantity Button Styles */
+button {
+  padding: 8px 12px;
+  font-size: 1rem;
+  background-color: #60b246; /* Rating color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #4e8f39; /* Darker green on hover */
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Quantity buttons specific */
+button.quantity-btn {
+  background-color: #5C5B5B; /* Tertiary color */
+  color: white;
+  margin: 0 5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-weight: bold;
+  line-height: 1;
+}
+
+button.quantity-btn:hover {
+  background-color: #444;
+}
+
+/* Remove button specific */
+button.remove-btn {
+  background-color: #d00000; /* Delete color */
+}
+
+button.remove-btn:hover {
+  background-color: #a30000;
+}
+
+/* Total and Checkout */
+p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #5C5B5B; /* Tertiary color */
+}
+
+button[routerLink] {
+  background-color: #FC8019; /* Primary color */
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+button[routerLink]:hover {
+  background-color: #d46a16;
+}
+
+button[routerLink] a {
+  color: white;
+  text-decoration: none;
+}

@@ -1,13 +1,29 @@
-<div *ngFor="let product of products" class="product-card">
-    <div class="product-image">
-        <img [src]="product.imageUrl" alt="{{ product.title }}" />
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="row">
+             <!-- loop over the collection of products -->
+        <div *ngFor="let tempProduct of products" class="col-md-3">
+
+            <div class="product-box">
+
+                <a routerLink="/products/{{tempProduct.id}}">
+                <img src="{{ tempProduct.imageUrl }}" class="img-responsive">
+              </a>
+              <div class="product-box">
+                <a routerLink="/products/{{tempProduct.name}}"><h1>{{ tempProduct.name }}</h1></a>
+              </div>
+            
+               
+                    
+                
+                
+                <div class="price">{{ tempProduct.unitPrice | currency: 'INR'}}</div>
+                <button class="btn btn-primary" (click)="cartAdd(tempProduct)">Add to cart</button>
+            </div>
+        </div>
+        </div>
     </div>
-    <div class="product-details">
-        <h3>{{ product.title }}</h3>
-        <p>{{ product.description }}</p>
-        <p><strong>Price:</strong> ${{ product.unitPrice }}</p>
-        <p><strong>In Stock:</strong> {{ product.unitsInStock }}</p>
-        <p><strong>Date Created:</strong> {{ product.dateCreated | date:'shortDate' }}</p>
-        <p><strong>Last Updated:</strong> {{ product.lastUpdated | date:'shortDate' }}</p>
-    </div>
+</div>
+<div *ngIf="products.length==0" class="alert alert-warning col-md-12">
+    No Records Found
 </div>
